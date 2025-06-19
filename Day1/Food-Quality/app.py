@@ -4,7 +4,7 @@ def check_food_quality(score):
     if score > 50:
         return "Good Quality", "green"
     else:
-        return "Bad Quality", "maroon"
+        return "Bad Quality", "red"
 
 st.title("🍽️ Food Quality Checker")
 
