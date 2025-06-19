@@ -10,9 +10,8 @@ def load_tasks():
         return []
 
 def save_tasks(tasks):
-    st.session_state.new_task_input = ""
-    st.session_state.due_date_input = date.today()
-    st.experimental_set_query_params()
+    new_task_input = ""
+    due_date_input = date.today()
     with open("tasks.json", "w") as f:
         json.dump(tasks, f)
 
