@@ -10,8 +10,8 @@ def load_tasks():
         return []
 
 def save_tasks(tasks):
-    new_task_input = ""
-    due_date_input = date.today()
+    new_task = ""
+    due_date = date.today()
     with open("tasks.json", "w") as f:
         json.dump(tasks, f)
 
