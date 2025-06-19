@@ -35,11 +35,16 @@ def main():
                 "completed": False,
                 "timestamp": str(datetime.now()),
                 "due_date": str(due_date)
-            })
-            save_tasks(tasks)
+                })
+        save_tasks(tasks)
+        st.experimental_set_query_params(clear_input="1")
+        st.rerun()
+
+        if st.experimental_get_query_params().get("clear_input") == ["1"]:
             st.session_state.new_task_input = ""
             st.session_state.due_date_input = date.today()
-            st.rerun()
+            st.experimental_set_query_params()
+
 
     for i, t in enumerate(tasks):
         col1, col2, col3, col4 = st.columns([0.5, 0.2, 0.15, 0.15])
