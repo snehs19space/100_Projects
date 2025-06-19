@@ -2,6 +2,9 @@
 
 This is a Streamlit-based Python application that checks food quality based on a numerical score.
 
+## 🔗 Links
+[![food app](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://food-quality.streamlit.app/)
+
 ## Features
 
 - Streamlit web UI with slider input
