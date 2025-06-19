@@ -41,4 +41,14 @@ def main():
                 st.rerun()
 
         if col3.button("✅" if not t["completed"] else "↩️", key=f"done_{i}"):
-            t["completed"] = not
+            t["completed"] = not t["completed"]
+            save_tasks(tasks)
+            st.rerun()
+
+        if col4.button("🗑️", key=f"delete_{i}"):
+            tasks.pop(i)
+            save_tasks(tasks)
+            st.rerun()
+
+if __name__ == "__main__":
+    main()
