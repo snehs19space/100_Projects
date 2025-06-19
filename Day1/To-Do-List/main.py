@@ -24,7 +24,7 @@ def main():
         if submitted and new_task:
             tasks.append({"task": new_task, "completed": False, "timestamp": str(datetime.now())})
             save_tasks(tasks)
-            st.experimental_rerun()
+            st.rerun()
 
     for i, t in enumerate(tasks):
         col1, col2, col3 = st.columns([0.6, 0.2, 0.2])
@@ -37,11 +37,11 @@ def main():
             if new_text:
                 t["task"] = new_text
                 save_tasks(tasks)
-                st.experimental_rerun()
+                st.rerun()
         if col3.button("✅" if not t["completed"] else "↩️", key=f"done_{i}"):
             t["completed"] = not t["completed"]
             save_tasks(tasks)
-            st.experimental_rerun()
+            st.rerun()
 
 if __name__ == "__main__":
     main()
