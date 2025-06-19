@@ -27,22 +27,18 @@ def main():
             st.rerun()
 
     for i, t in enumerate(tasks):
-        col1, col2, col3 = st.columns([0.6, 0.2, 0.2])
+        col1, col2, col3, col4 = st.columns([0.5, 0.2, 0.2, 0.1])
         if t["completed"]:
-            col1.markdown(f"~~{t['task']}~~")
+            col1.markdown(f"<span style='color:gray'><s>{t['task']}</s></span>", unsafe_allow_html=True)
         else:
-            col1.markdown(t["task"])
+            col1.markdown(f"<span style='color:#2b8a3e'>{t['task']}</span>", unsafe_allow_html=True)
+
         if col2.button("Edit", key=f"edit_{i}"):
             new_text = st.text_input("Edit task", value=t["task"], key=f"input_{i}")
             if new_text:
                 t["task"] = new_text
                 save_tasks(tasks)
                 st.rerun()
+
         if col3.button("✅" if not t["completed"] else "↩️", key=f"done_{i}"):
-            t["completed"] = not t["completed"]
-            save_tasks(tasks)
-            st.rerun()
-
-if __name__ == "__main__":
-    main()
-
+            t["completed"] = not
