@@ -2,14 +2,14 @@ import streamlit as st
 
 def check_food_quality(score):
     if score > 50:
-        return "Good Quality"
+        return "Good Quality", "green"
     else:
-        return "Bad Quality"
+        return "Bad Quality", "red"
 
-st.title("Food Quality Checker")
+st.title("🍽️ Food Quality Checker")
 
 score = st.slider("Select food quality score", 0, 100, 50)
 
-result = check_food_quality(score)
+result_text, color = check_food_quality(score)
 
-st.subheader(f"Food is of {result}")
+st.markdown(f"<h3 style='color:{color}'>Food is of {result_text}</h3>", unsafe_allow_html=True)
