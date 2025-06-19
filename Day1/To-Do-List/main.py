@@ -18,11 +18,15 @@ def main():
 
     tasks = load_tasks()
 
-    with st.form("add_task_form"):
+    with st.form("task_form"):
         new_task = st.text_input("New Task")
-        submitted = st.form_submit_button("Add Task")
-        if submitted and new_task:
-            tasks.append({"task": new_task, "completed": False, "timestamp": str(datetime.now())})
+        delete_task = st.text_input("Delete Task (by text)")
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            if new_task:
+                tasks.append({"task": new_task, "completed": False, "timestamp": str(datetime.now())})
+            if delete_task:
+                tasks = [t for t in tasks if t["task"] != delete_task]
             save_tasks(tasks)
             st.rerun()
 
