@@ -12,7 +12,7 @@ This is a simple and interactive To-Do List web app built using **Python** and *
 ## 🔗 Links
 [![todo app](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://to-do-list-app-100.streamlit.app/)
 
-## 📦 Features
+## Features
 
 - **User-friendly UI** with task color highlighting and strikethrough on completion.
 - **Task persistence** using a local JSON file (`tasks.json`).
