@@ -20,26 +20,30 @@ def main():
     completed_count = sum(1 for t in tasks if t["completed"])
     st.info(f"✅ Completed Tasks: {completed_count} / {len(tasks)}")
 
-    if "new_task_input" not in st.session_state:
-        st.session_state.new_task_input = ""
-    if "due_date_input" not in st.session_state:
-        st.session_state.due_date_input = date.today()
+    if "new_task" not in st.session_state:
+        st.session_state.new_task = ""
+    if "due_date" not in st.session_state:
+        st.session_state.due_date = date.today()
+    if "edit_task_index" not in st.session_state:
+        st.session_state.edit_task_index = None
+    if "edit_task_text" not in st.session_state:
+        st.session_state.edit_task_text = ""
 
     with st.form("add_task_form"):
-        new_task = st.text_input("New Task", key="new_task_input")
-        due_date = st.date_input("Due Date", value=st.session_state.due_date_input, key="due_date_input")
+        st.session_state.new_task = st.text_input("New Task", value=st.session_state.new_task)
+        st.session_state.due_date = st.date_input("Due Date", value=st.session_state.due_date)
         submitted = st.form_submit_button("Add Task")
-        if submitted and new_task:
+        if submitted and st.session_state.new_task:
             tasks.append({
-                "task": new_task,
+                "task": st.session_state.new_task,
                 "completed": False,
                 "timestamp": str(datetime.now()),
-                "due_date": str(due_date)
-                })
-        save_tasks(tasks)
-        new_task = st.text_input("New Task", key="new_task_input")
-        due_date = st.date_input("Due Date", value=st.session_state.due_date_input, key="due_date_input")
-        
+                "due_date": str(st.session_state.due_date)
+            })
+            save_tasks(tasks)
+            st.session_state.new_task = ""
+            st.session_state.due_date = date.today()
+            st.rerun()
 
     for i, t in enumerate(tasks):
         col1, col2, col3, col4 = st.columns([0.5, 0.2, 0.15, 0.15])
@@ -50,10 +54,16 @@ def main():
         else:
             col1.markdown(f"<span style='color:#2b8a3e'>{task_display}</span>", unsafe_allow_html=True)
 
-        if col2.button("✏️", key=f"edit_{i}"):
-            new_text = st.text_input("Edit task", value=t["task"], key=f"input_{i}")
-            if new_text:
-                t["task"] = new_text
+        if col2.button("✏️", key=f"edit_btn_{i}"):
+            st.session_state.edit_task_index = i
+            st.session_state.edit_task_text = t["task"]
+
+        if st.session_state.edit_task_index == i:
+            new_text = st.text_input("Edit task", value=st.session_state.edit_task_text, key=f"edit_input_{i}")
+            if st.button("Save", key=f"save_{i}"):
+                tasks[i]["task"] = new_text
+                st.session_state.edit_task_index = None
+                st.session_state.edit_task_text = ""
                 save_tasks(tasks)
                 st.rerun()
 
