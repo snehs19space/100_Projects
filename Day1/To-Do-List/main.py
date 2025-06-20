@@ -10,8 +10,6 @@ def load_tasks():
         return []
 
 def save_tasks(tasks):
-    new_task = ""
-    due_date = date.today()
     with open("tasks.json", "w") as f:
         json.dump(tasks, f)
 
@@ -39,6 +37,8 @@ def main():
                 "due_date": str(due_date)
                 })
         save_tasks(tasks)
+        st.session_state.new_task_input = ""
+        st.session_state.due_date_input = date.today()
         
 
     for i, t in enumerate(tasks):
