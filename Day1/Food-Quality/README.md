@@ -1,4 +1,4 @@
-# Food Quality Checker – Streamlit App
+# 🍽️ Food Quality Checker – Streamlit App
 
 This is a Streamlit-based Python application that checks food quality based on a numerical score.
 
