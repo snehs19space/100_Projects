@@ -37,8 +37,8 @@ def main():
                 "due_date": str(due_date)
                 })
         save_tasks(tasks)
-        st.session_state.new_task_input = ""
-        st.session_state.due_date_input = date.today()
+        new_task = st.text_input("New Task", key="new_task_input")
+        due_date = st.date_input("Due Date", value=st.session_state.due_date_input, key="due_date_input")
         
 
     for i, t in enumerate(tasks):
