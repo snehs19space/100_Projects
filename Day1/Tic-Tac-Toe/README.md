@@ -19,7 +19,7 @@ Install requirements:
 
 ```bash
 pip install pygame
-git clone [https://github.com/YOUR_USERNAME/tic-tac-toe-pygame.git](https://github.com/snehs19space/100_Projects/tree/main/Day1/Tic-Tac-Toe)
+git clone https://github.com/snehs19space/100_Projects/tree/main/Day1/Tic-Tac-Toe
 ```
 
 ## License
