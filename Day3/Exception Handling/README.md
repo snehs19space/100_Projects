@@ -1,4 +1,4 @@
-# 🛠️ Python Exception Handling Overview
+# 🛠️ Python Exception Handling
 
 This provides a summary of different types of exceptions in Python, examples of how they occur, and how to handle them using various constructs such as `try-except`, `assert`, and manual `raise` statements.
 
