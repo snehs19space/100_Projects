@@ -1,4 +1,4 @@
-# 📊 Pandas Series Project
+# 📊 Pandas Series
 
 ## Overview
 This guided project introduces the concept of Pandas **Series**, a fundamental one-dimensional data structure in Python used for data analysis. The project walks through various tasks such as creating Series from lists, dictionaries, and CSV files, performing operations, accessing attributes, and finally ends with a capstone project demonstrating real-world usage of Series for a financial portfolio and S&P 500 analysis.
