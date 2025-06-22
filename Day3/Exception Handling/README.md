@@ -7,12 +7,12 @@ This provides a summary of different types of exceptions in Python, examples of 
 
 ### 🔸 Division by Zero
 ```python
-# print(15 / 0)  # ZeroDivisionError
+print(15 / 0)  # ZeroDivisionError
 ```
 
 ### 🔸 Syntax Error
 ```python
-# print(15/0))  # SyntaxError: unmatched ')'
+print(15/0))  # SyntaxError: unmatched ')'
 ```
 
 
@@ -20,22 +20,22 @@ This provides a summary of different types of exceptions in Python, examples of 
 
 ### 🔹 Raise ValueError Based on Condition
 ```python
-# name = input("Enter your Name: ")
-# age = input("Enter your Age:")
-# print("Your name is:", name)
-# if age < 18:
-#     raise ValueError("Error: You need to be over 18.")
-# else:
-#     print("Your age is:", age)
+name = input("Enter your Name: ")
+age = input("Enter your Age:")
+print("Your name is:", name)
+if age < 18:
+     raise ValueError("Error: You need to be over 18.")
+else:
+     print("Your age is:", age)
 ```
 
 ### 🔹 Raise General Exception
 ```python
-# num = input("Enter a Number: ")
-# if num < 5:
-#     raise Exception("Error: Value needs to be greater than 5.")
-# else:
-#     print("Your number is:", num)
+num = input("Enter a Number: ")
+if num < 5:
+     raise Exception("Error: Value needs to be greater than 5.")
+else:
+     print("Your number is:", num)
 ```
 
 
@@ -43,18 +43,18 @@ This provides a summary of different types of exceptions in Python, examples of 
 
 ### 🔹 Assert Condition
 ```python
-# x = 1
-# y = 0
-# assert y != 0, "Invalid Operation"
-# print(x / y)
+x = 1
+y = 0
+assert y != 0, "Invalid Operation"
+print(x / y)
 ```
 
 ### 🔹 Using assert in a Function
 ```python
-# def print_age(age):
-#     assert age > 0, "The value of age has to be greater than Zero."
-#     print("Your age is:", age)
-# print_age(8)
+def print_age(age):
+     assert age > 0, "The value of age has to be greater than Zero."
+     print("Your age is:", age)
+print_age(8)
 ```
 
 ## Try-Except Blocks
