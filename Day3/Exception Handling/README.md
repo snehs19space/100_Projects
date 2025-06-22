@@ -39,7 +39,7 @@ else:
 ```
 
 
-## AssertionError
+## Assertion Errors
 
 ### 🔹 Assert Condition
 ```python
@@ -94,9 +94,6 @@ finally:
 ```
 
 > ⚠️ Note: In the final example, if the file does not exist, calling `file.close()` in the `finally` block without confirming that the file was successfully opened will raise another exception.
-
-## 
-
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/snehs19space/100_Projects/blob/main/LICENSE) file for details.
