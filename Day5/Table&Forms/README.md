@@ -36,9 +36,3 @@ The project contains the following files and directories:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/snehs19space/100_Projects/blob/main/LICENSE) file for details.
-
-This project is licensed under the MIT License. You are free to use, modify, and distribute this code with attribution.
-
-## Support
-
-If you like this project, consider starring ⭐ the repository and sharing it with others!
