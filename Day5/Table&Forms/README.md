@@ -5,7 +5,7 @@ This webpage was developed using only HTML5 and CSS3, and is suitable for deploy
 
 ## 🔗 Live Website
 
-Visit the live site here:  [![foxes](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://foxes-chi.vercel.app/)
+Visit the live site here:  [![foxes](https://img.shields.io/badge/-Vercel-000f10?style=flat&logo=vercel&logoColor=white)](https://foxes-chi.vercel.app/)
 
 ## Project Structure
 
