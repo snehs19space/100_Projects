@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fox Information Report</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>Everything About Foxes</h1>
+      <h2>by Sanvi Sneh</h2>
+      <form action="someprogram.php" class="form">
+        <h3>Join our Mailing List!</h3>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" required>
+
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" value="xxx@xxx.com" required>
+
+        <p>How often should we send you email?</p>
+        <label><input type="radio" name="howoften" value="daily"> Daily</label>
+        <label><input type="radio" name="howoften" value="weekly"> Weekly</label>
+        <label><input type="radio" name="howoften" value="monthly"> Monthly</label>
+
+        <label>
+          <input type="checkbox" id="newsletter" name="newsletter">
+          I'd like the bi-monthly newsletter
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </aside>
+
+    <main class="main-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Description</th>
+            <th>Link to Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="public/redfox.jpg" alt="Red Fox" /></td>
+            <td>The red fox, cousin to the dog, is common across Minnesota. You might even spot one in the Twin Cities.</td>
+            <td><a href="https://www.nationalgeographic.com/animals/mammals/r/red-fox/" target="_blank">National Geographic</a></td>
+          </tr>
+          <tr>
+            <td><img src="public/blackfox.jpg" alt="Black Fox" /></td>
+            <td>The black fox is a rare genetic variation of the red fox.</td>
+            <td><a href="https://www.safariltd.com/safaripedia/black-fox" target="_blank">Safari LTD</a></td>
+          </tr>
+          <tr>
+            <td><img src="public/grayfox.jpg" alt="Gray Fox" /></td>
+            <td>The gray fox has salt and pepper gray fur with a long bushy tail marked with a black stripe.</td>
+            <td><a href="http://www.wildlifesciencecenter.org/gray-fox" target="_blank">Wildlife Science Center</a></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">This webpage was designed and constructed by Sanvi Sneh.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+  </div>
+</body>
+</html>
 
