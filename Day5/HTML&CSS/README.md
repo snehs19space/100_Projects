@@ -11,7 +11,7 @@ Visit the live site here:  [![eet](https://img.shields.io/badge/-Vercel-000f10?s
 ## Folder Structure
 
 ```
-epic-escape-tours/
+HTML&CSS/
 ├── index.html
 ├── style.css
 ├── images/
