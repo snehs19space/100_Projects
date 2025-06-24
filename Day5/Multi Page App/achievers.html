@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Achievers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Leaderboard</h1>
+            <ul id="achiever"></ul>
+            <a href="index.html">Go Home</a>
+        </div>
+    </div>
+
+    <script>
+        const achieverList = document.getElementById("achiever");
+
+        let achievers = JSON.parse(localStorage.getItem("topAchievers")) || [];
+
+        achievers.sort((a, b) => b.score - a.score);
+
+        const topFive = achievers.slice(0, 5);
+
+        if (topFive.length === 0) {
+            achieverList.innerHTML = "<li>No achievers yet.</li>";
+        } else {
+            topFive.forEach((entry, index) => {
+                const li = document.createElement("li");
+                li.textContent = `${index + 1}. ${entry.name} - ${entry.score}`;
+                achieverList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

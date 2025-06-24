@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous" />
+</head>
+<body>
+
+  <div class="ques_container" id="startScreen">
+    <div class="allques" style="text-align: center; width: 100%;">
+      <h1 style="color: green; font-size: 3em;">Welcome!</h1>
+      <p style="font-size: 1.2rem; margin-bottom: 20px;">Enter your name to begin:</p>
+      <input type="text" id="username"
+             placeholder="Enter your name"
+             style="padding: 12px 16px; font-size: 1.1rem; border: 2px solid green; border-radius: 8px; width: 60%; max-width: 300px;">
+      <br><br>
+      <a href="#" onclick="startQuiz()">Start Quiz</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+
+  <div class="ques_container" id="quizScreen" style="display: none;">
+    <div class="allques">
+      <div class="info">
+        <div class="textques">
+          <p id='progressText'>Question</p>
+          <div id="progressBar">
+            <div id="progressBarFull" style="width: 0%; background-color: green; height: 100%;"></div>
+          </div>
+        </div>
+        <div class="textscore">
+          <p>Score</p>
+          <h2 id='scorenumber'>0</h2>
+        </div>
+      </div>
+
+      <div class="questions">
+        <div><h3 id='QuestionText'>Loading question...</h3></div>
+        <div class="choices">
+          <div><p class='ChoiceText' data-number="1">Choice 1</p></div>
+          <div><p class='ChoiceText' data-number="2">Choice 2</p></div>
+          <div><p class='ChoiceText' data-number="3">Choice 3</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="play.js"></script>
+</body>
+</html>
