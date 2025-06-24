@@ -1,0 +1,157 @@
+body {
+    background: #243010;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+h2, h3, p {
+    margin: 0;
+}
+
+#hdr {
+    min-height: 220px;
+    padding-top: 3em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+}
+
+.hdr-bg {
+    background: url('../images/brown-camel-931881.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 260px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    margin: 0;
+}
+
+.content-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.dest {
+    background: #2A3C24;
+    width: 40%;
+    display: inline-block;
+    margin: 1em;
+    vertical-align: top;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dest img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dest-text {
+    padding: 1em;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 1em 2em;
+    border: 1px solid #87A330;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background: transparent;
+    transition: background 0.3s ease;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: #A1C349;
+}
+
+footer {
+    background: #CAD593;
+    color: black;
+    height: 50px;
+    line-height: 5px;
+    text-align: center;
+}
+
+h2, h3 {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+.contact {
+    background: #A1C349;
+    min-height: 100px;
+    color: black;
+}
+
+.contact form {
+    margin-top: 1em;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact button {
+    background: #243010;
+    color: white;
+    padding: 0.7em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #2A3C24;
+}
+
+.prices {
+    background: #87A330;
+    min-height: 100px;
+    padding: 1em;
+    color: black;
+    text-align: left;
+}
+
+.prices ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.prices li {
+    background: #CAD593;
+    margin-bottom: 0.8em;
+    padding: 0.8em;
+    border-radius: 5px;
+    font-size: 0.95em;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    padding-bottom: 1.5em;
+}
