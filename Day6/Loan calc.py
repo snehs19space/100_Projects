@@ -56,8 +56,8 @@ def prepayment_schedule(principal, annual_rate, tenure_months, prepayments):
 st.title("Loan EMI & Prepayment Calculator")
 
 principal = st.number_input("Loan Principal (₹)", min_value=1000, step=1000)
-annual_rate = st.slider("Annual Interest Rate (%)", 5.0, 20.0, 8.5, 0.1)
-tenure_years = st.slider("Loan Tenure (Years)", 1, 5, 3)
+annual_rate = st.slider("Annual Interest Rate (%)", 5.0, 20.0, 8.5, 0.05)
+tenure_years = st.slider("Loan Tenure (Years)", 1, 15, 3)
 tenure_months = tenure_years * 12
 
 num_prepayments = st.number_input("Number of Prepayments", min_value=0, max_value=5, value=0, step=1)
